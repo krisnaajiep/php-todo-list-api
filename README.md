@@ -1,6 +1,6 @@
 # PHP Todo List API
 
-A RESTful API built with PHP and MySQL that allows users to manage their to-do list. It supports pagination and filtering by status. This API uses [php-jwt](https://github.com/firebase/php-jwt) for JWT authentication, [phpdotenv](https://github.com/vlucas/phpdotenv) for loads environment variables and [guzzle](https://docs.guzzlephp.org/en/stable/index.html) for PHP HTTP client.
+A RESTful API built with PHP and MySQL that allows users to manage their to-do list. It supports pagination and filtering by status. This API uses [php-jwt](https://github.com/firebase/php-jwt) for JWT authentication, [phpdotenv](https://github.com/vlucas/phpdotenv) for loads environment variables and [guzzle](https://docs.guzzlephp.org/en/stable/index.html) for PHP HTTP client. Inspired by [roadmap.sh](https://roadmap.sh/projects/todo-list-api)
 
 ## **Getting started guide**
 
@@ -53,10 +53,6 @@ You must include an access token in each request to the API with the Authorizati
 If an API key is missing, malformed, or invalid, you will receive an HTTP 401 Unauthorized response code.
 
 ## Rate and usage limits
-
-`Use this section to cover your APIs' terms of use. Include API limits, constraints, and relevant error codes, so consumers understand the permitted API usage and practices.`
-
-`The example given below is from The Postman API's documentation. Use it as a reference to write your APIs' terms of use.`
 
 API access rate limits apply at a per-API key basis in unit time. The limit is 60 requests per minute. Also, depending on your plan, you may have usage limits. If you exceed either limit, your request will return an HTTP 429 Too Many Requests status code.
 
