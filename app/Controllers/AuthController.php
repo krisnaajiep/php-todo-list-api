@@ -16,14 +16,13 @@ class AuthController extends Controller
 
     $user = $this->model('User')->create($validator->validated());
 
-    http_response_code(201);
-    return json_encode($this->respondWithToken([
+    return $this->respondWithToken(201, [
       'message' => 'Register successful',
       'user' => [
         'id' => $user->id,
         'name' => $user->name,
       ],
-    ]));
+    ]);
   }
 
   public function login(array $credentials)
@@ -38,13 +37,13 @@ class AuthController extends Controller
 
     $user = $this->model('User')->login($validator->validated());
 
-    return json_encode($this->respondWithToken([
+    return $this->respondWithToken(200, [
       'message' => 'Login successful',
       'user' => [
         'id' => $user->id,
         'name' => $user->name,
       ],
-    ]));
+    ]);
   }
 
   public function refresh()
@@ -71,19 +70,19 @@ class AuthController extends Controller
         'expired_at' => date('Y-m-d H:i:s', $decode->exp),
       ]);
 
-      return json_encode($this->respondWithToken([
+      return $this->respondWithToken(200, [
         'message' => 'Refresh token successful',
         'user' => [
           'id' => intval($decode->sub),
           'name' => $decode->name
         ]
-      ]));
+      ]);
     } catch (\Throwable $th) {
       return Response::json($th->getCode(), ['message' => $th->getMessage()]);
     }
   }
 
-  private function respondWithToken(array $data): array
+  private function respondWithToken(int $code, array $data)
   {
     $access_token = MyJWT::encode($data, 3600, true);
     $refresh_token = MyJWT::encode($data, (3600 * 24 * 3), false);
@@ -91,9 +90,7 @@ class AuthController extends Controller
 
     setcookie('refresh_token', $refresh_token, time() + (3600 * 24 * 3), httponly: true);
 
-    header('Content-type: application/json');
-
-    return [
+    return Response::json($code, [
       'message' => $data['message'],
       'access_token' => $access_token,
       'refresh_token' => $refresh_token,
@@ -103,6 +100,6 @@ class AuthController extends Controller
         'id' => $data['user']['id'],
         'name' => $data['user']['name'],
       ],
-    ];
+    ]);
   }
 }

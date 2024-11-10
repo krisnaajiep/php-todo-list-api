@@ -1,9 +1,0 @@
-{
-    "::1": {
-        "limit": 60,
-        "attempt": 1,
-        "start_time": 1731265046,
-        "remaining": 59,
-        "reset_time": 1731265106
-    }
-}

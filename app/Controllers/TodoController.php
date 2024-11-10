@@ -96,10 +96,6 @@ class TodoController extends Controller
   public function delete(int $id)
   {
     $result = $this->model('Todo')->delete($id);
-
-    if ($result === true) {
-      http_response_code(204);
-      return;
-    }
+    if ($result === true) return Response::json(204);
   }
 }
