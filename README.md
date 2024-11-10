@@ -1,6 +1,6 @@
 # PHP Todo List API
 
-A RESTful API built with PHP and MySQL that allows users to manage their to-do list. It supports pagination and filtering by status. This API uses [php-jwt](https://github.com/firebase/php-jwt) for JWT authentication, [phpdotenv](https://github.com/vlucas/phpdotenv) for loads environment variables and [guzzle](https://docs.guzzlephp.org/en/stable/index.html) for PHP HTTP client. Inspired by [roadmap.sh](https://roadmap.sh/projects/todo-list-api)
+A RESTful API built with PHP and MySQL that allows users to manage their to-do list. It supports pagination and filtering by status. This API uses [php-jwt](https://github.com/firebase/php-jwt) for JWT authentication, [phpdotenv](https://github.com/vlucas/phpdotenv) for loads environment variables, [phpunit](https://phpunit.de/index.html) for unit testing, and [guzzle](https://docs.guzzlephp.org/en/stable/index.html) for PHP HTTP client. Inspired by [roadmap.sh](https://roadmap.sh/projects/todo-list-api)
 
 ## **Getting started guide**
 
