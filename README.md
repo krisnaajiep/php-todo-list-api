@@ -86,4 +86,3 @@ In case you have questions or need further assistance, you can refer to the foll
 
 - [API Documentation](https://documenter.getpostman.com/view/37187730/2sAY52dLAH)
 - [Issues](https://github.com/krisnaajiep/php-todo-list-api/issues)
-- Email: [krisnaajiep@gmail.com](https://mailto:krisnaajiep@gmail.com)
