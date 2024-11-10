@@ -12,7 +12,6 @@ if (isset($argv[1]) && $argv[1] == 'jwt:secret') {
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
-require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/app/init.php';
 
 try {
