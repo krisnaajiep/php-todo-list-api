@@ -40,7 +40,7 @@ To start using the Todo List Tracker API, you need to -
    ```
 
 5. Run the local web server.
-6. Run the API with the base URL.
+6. Access the endpoints with the base URL.
 
 ## Authentication
 
