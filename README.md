@@ -14,7 +14,7 @@ To start using the Todo List Tracker API, you need to -
 1. Clone the repository.
 
    ```bash
-    git clone https://github.com/krisnaajiep/todo-list-api.git
+    git clone https://github.com/krisnaajiep/php-todo-list-api.git
 
    ```
 
