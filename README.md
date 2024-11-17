@@ -39,7 +39,7 @@ To start using the Todo List Tracker API, you need to -
 
    ```
 
-5. Run the apache web server and mysql server.
+5. Run the Apache web server and MySQL Server.
 6. Access the endpoints with the base URL.
 
 ## Authentication
