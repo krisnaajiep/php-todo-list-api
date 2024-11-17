@@ -4,7 +4,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 if (isset($argv[1]) && $argv[1] == 'jwt:secret') {
   $key = bin2hex(random_bytes(32));
-  file_put_contents('.env', "JWT_SECRET=$key");
+  file_put_contents('.env', "\nJWT_SECRET=$key", FILE_APPEND);
   echo "jwt secret: $key";
   exit;
 }

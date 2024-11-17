@@ -5,6 +5,9 @@ class Response
   public static function json(int $code = 200, array $data = [])
   {
     http_response_code($code);
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset");
     header('Content-type:application/json');
 
     if ($code !== 500 && $code !== 429) {

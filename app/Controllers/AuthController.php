@@ -7,7 +7,7 @@ class AuthController extends Controller
     $validator = Validator::setRules($data, [
       'name' => ['required', 'alpha', 'min_length:2', 'max_length:50'],
       'email' => ['required', 'email', 'max_length:254'],
-      'password' => ['required', 'min_length:8', 'max_length:255', 'match:password_confirmation'],
+      'password' => ['required', 'min_length:8', 'max_length:255'],
       'password_confirmation' => ['required', 'match:password'],
     ]);
 
