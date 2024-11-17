@@ -1,9 +1,0 @@
-{
-    "127.0.0.1": {
-        "limit": 60,
-        "attempt": 2,
-        "start_time": 1731828281,
-        "remaining": 58,
-        "reset_time": 1731828341
-    }
-}
